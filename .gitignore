@@ -1,5 +1,9 @@
 # ignore all the python files
-*.py
+mj.py
+model.py
+
+# ignore all the txt files
+*.txt
 
 # ignore the configuration files
 *.ini
