@@ -1,8 +1,14 @@
-# ignore all .py files
+# ignore all the python files
 *.py
+
+# ignore the configuration files
+*.ini
 
 # ignore all the log of jupiter
 *.ipynb_checkpoints
+
+# ignore the gitignore
+*.gitignore
 
 # ignore all this folder
 dataset/*
