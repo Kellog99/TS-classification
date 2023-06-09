@@ -1,3 +1,7 @@
+\usepackage{bbold}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
 # TS-classification
 
 ## Cloud-Point
