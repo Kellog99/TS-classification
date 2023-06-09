@@ -3,7 +3,7 @@
 ## Cloud-Point
 #### **Definition (Dynamic Time Warping)**   
 
-Let $S_1=\{x_i\}_{i\in I},S_2=\{x'_j\}_{j\in J}$ be two sequence of elements in $\mathbb{R}^d$ and let $\mathcal{A}(S_1,S_2)$ be the set of all path alignment between $I$ and $J$. Then the DTW of $S_1$ and $S_2$ is defined as
+Let $S_1=\{x_i\}_{i\in I}, S_2=\{x'_j\}_{j\in J}$ be two sequence of elements in $\mathbb{R}^d$ and let $\mathcal{A}(S_1,S_2)$ be the set of all path alignment between $I$ and $J$. Then the DTW of $S_1$ and $S_2$ is defined as
 $$
 DTW_q(S_1,S_2)=\min_{\pi \in \mathcal{A}(S_1,S_2)}\left(\sum_{(i,j)\in \pi}\|x_i-x'_j\|_{l^q}^q\right)^{\frac{1}{q}}
 $$
@@ -128,7 +128,7 @@ $$
 B_p(K):=\left\{\sigma\in C_p(K)|\exists\sigma'\in C_{p+1}(K), \partial_{p+1}\sigma'=\sigma\right\}
 $$
 
-Since $Z_p(K)\supset B_p(K)$ the following #### **Definition has meaning.
+Since $Z_p(K)\supset B_p(K)$ the following definition has meaning.
 #### **Definition (p-th homology group)**   
 Let $K$ be a simplicial complex. The p-th homology group is 
 $$
