@@ -2,6 +2,7 @@
 
 ## Cloud-Point
 #### **Definition (Dynamic Time Warping)**   
+
 Let $S_1=\{x_i\}_{i\in I},S_2=\{x'_j\}_{j\in J}$ be two sequence of elements in $\mathbb{R}^d$ and let $\mathcal{A}(S_1,S_2)$ be the set of all path alignment between $I$ and $J$. Then the DTW of $S_1$ and $S_2$ is defined as
 $$
 DTW_q(S_1,S_2)=\min_{\pi \in \mathcal{A}(S_1,S_2)}\left(\sum_{(i,j)\in \pi}\|x_i-x'_j\|_{l^q}^q\right)^{\frac{1}{q}}
@@ -17,20 +18,22 @@ D(n,m)=\begin{cases}
 $$
 
 #### **Theorem (Takens' embedding theorem)**    
+
 Let $M$ be a $m-$dimensional manifold, $\phi\in Diff(C^2(M))$ and $y\in C^2(M,\mathbb{R})$then the map
 \begin{align*}
     \Phi_{(\phi,y)}:M&\to\mathbb{R}^{2m+1}\\
     x&\mapsto\Phi_{(\phi,y)}(x):=\left(y(x),y(\phi(x)),\cdots,y\left(\phi^{2m}\right)\right)
 \end{align*}
 is an embedding.
-\end{theorem}
 
 
-#### **Definition (Embedding)** 
+#### **Definition (Embedding)**
+
 An injective continuous map $f: X\to Y$ between topological spaces X and Y is a topological embedding if f yields a homeomorphism between X and $f(X)$.
 
 
 #### **Definition (Diffeomorphism)** 
+
 $f: M \rightarrow N$ is a diffeomorphism, $f\in Diff(C^0(M))$ if 
 
 * $f$ is a differentiable bijection.
