@@ -1,18 +1,18 @@
 # TS-classification
 Definition (Dynamic Time Warping)
 :     Let $S_1=\{x_i\}_{i\in I},S_2=\{x'_j\}_{j\in J}$ be two sequence of elements in $\mathbb{R}^d$ and let $\mathcal{A}(S_1,S_2)$ be the set of all path alignment between $I$ and $J$. Then the DTW of $S_1$ and $S_2$ is defined as
-\[
+$$
 DTW_q(S_1,S_2)=\min_{\pi \in \mathcal{A}(S_1,S_2)}\left(\sum_{(i,j)\in \pi}\|x_i-x'_j\|_{l^q}^q\right)^{\frac{1}{q}}
-\]
+$$
 
 It is possible to dynamically program $\mathcal{A}(S_1, S_2)$. Let $n=|S_1|$ and $m=|S_2|$ then
-\[
+$$
 D(n,m)=\begin{cases}
 0 &m<0\vee n<0\\
 1 &m = 0 \vee n = 0\\
 \substack{D(n-1,m)+D(n-1,m-1)\\+D(n,m-1)} &otherwise
 \end{cases}
-\]
+$$
 
 \begin{theorem}(Takens' embedding theorem) 
 Let $M$ be a $m-$dimensional manifold, $\phi\in Diff(C^2(M))$ and $y\in C^2(M,\mathbb{R})$then the map
@@ -61,18 +61,18 @@ From the previous definitions, it is possible to see that
 * The function $\phi(t)=t-\tau,\tau\in \mathbb{R}$ is such that $\phi\in Diff(C^\infty(\mathbb{R}))$ so $\phi\in Diff(C^2((0,1)))$
 
 This implies that 
-\[
+$$
 \left\{(y(t),y(t-\tau),y(t-2\tau))|t\in (2\tau, 1),\tau \in (0,0.5)\right\}
-\]
+$$
 is an embedding of the time series $y(t)$
 
 
 \section{Simplicial complex}
 Definition (Simplex) 
 :   A point $x \in \mathbb{R}^d$ is a convex combination of the points in $S$ if it is an affine combination with non-negative coefficients. The convex hull of S is the set of all convex combinations of S, i.e.,
-\[
+$$
 conv(S):=\left\{\sum_{i=0}^k\lambda_iu_i\left|\sum_{i=0}^k\lambda_i=1,\lambda\geq 0\right.\right\}
-\]
+$$
 A $k-$simplex is the convex hull of $k + 1$ affinely independent points in $\mathbb{R}^d$ and it has dimension $k$.
 
 
@@ -85,9 +85,9 @@ Definition (Simplicial complex)
 
 Definition (Vietoris-Rips (VR) complexes) 
 :   Let $S$ be a set of points in $R^d$. The Vietoris-Rips complex of $S$ with radius $r$ is the collection of subsets of $S$ of diameter at most $2r$ , i.e.,
-\[
+$$
 VR_r (S) = \{\sigma\subset S : diam(\sigma) \leq2r\}
-\]
+$$
 
 \begin{figure}
 \centering
@@ -113,26 +113,26 @@ Definition (Witness complex)
 
 Definition (p-chain) 
 :   Let $K$ be a simplicial complex and $A$ an abelian group. A p-chain is a formal sum of p-dimensional faces of $K$, i.e.
-\[
+$$
 C_p(K)=\left\{\sum_{\sigma\in F_p(K)}a_\sigma\sigma|a_\sigma, \in A\right\}
-\]
+$$
 
 Definition
 Let $K$ be a simplex. A p-cycle $Z_p(K)$ is a chain with empty boundary
-\[
+$$
 Z_p(K):=\left\{\sigma\in Ker(\partial_p(C_p(K)))\right\}
-\]
+$$
 A p-boundary $B_p(K)$ is a chain which is a boundary of a (p+1)-chain
-\[
+$$
 B_p(K):=\left\{\sigma\in C_p(K)|\exists\sigma'\in C_{p+1}(K), \partial_{p+1}\sigma'=\sigma\right\}
-\]
+$$
 
 Since $Z_p(K)\supset B_p(K)$ the following definition has meaning.
 Definition (p-th homology group) 
 Let $K$ be a simplicial complex. The p-th homology group is 
-\[
+$$
 H_p(K):={Z_p(K)}/{B_p(K)}
-\]
+$$
 and $\beta_p(K):=rank\left(H_p(K)\right)$ is the p-th Betti number.
 
 \begin{figure}
@@ -144,27 +144,27 @@ and $\beta_p(K):=rank\left(H_p(K)\right)$ is the p-th Betti number.
 
 Definition (Filtration) 
 :   A filtration $\mathcal {F}$ is an indexed family $\{S_{i}\}_{i\in I}$ of sub-objects of a given algebraic structure $S$ such that 
-\[
+$$
 S_{i}\subseteq S_{j}\qquad \forall i,j\in I, i\leq j
-\]
+$$
 
 Let $K$ be a simplicial complex and let $f: K\to \mathbb{R}$ be a monotonic function. The induced filtration of $K$ is $\{K_i\}_{i=0}^n$ where $K_0=\phi, K_n= K$ and 
-\[
+$$
 a_i:=\min\left\{r\left|K_i=f^{-1}((-\infty,r]))\right.\right\}
-\]
+$$
 By construction it holds that $\forall i\leq j, K_i\subset K_j$ then it is possible to define $f_p^{i,j}:H_p(K_i)\to H_p(K_j)$ where $f_p^{i,j}$ is the induced map.
 
 
 
 Definition (p-th persistent homology)
 :   The p-th persistent homology groups are the images of the homomorphism induced by inclusion so
-\[
+$$
 H^{i,j}_p(K)=imm f_p^{i,j}
-\]
+$$
 The ranks of these groups are the p-th persistence Betti numbers
-\[
+$$
 \beta_p^{i,j} =rank\left(H_p^{i,j}(K)\right)
-\]
+$$
 
 
 Definition (life-and-death)
@@ -174,9 +174,9 @@ Definition (life-and-death)
 * $\gamma$ dies in $K_j$ if it merges with an older class as we go from $K_{j-1}$ to $K_j$.
 
 Moreover, consider $a_i, a_j$, previously defined. Then the persistence of $\gamma$ is 
-\[
+$$
 pers(\gamma)=a_j-a_i
-\]
+$$
 and $(a_j,a_i)$ is called the persistent pair.
 
 
@@ -207,11 +207,11 @@ Definition (Forward propagation)
 x&\mapsto<\mathcal{N}>^\rho(x)=y^{[L]}
 \end{align*}
 where
-\[
+$$
 \begin{cases}
 y^{[0]}(x)=0\\
 y^{[l]}(x)=\rho^l\left(W^l y^{[l-1]}(x)+\theta^l\right) & l\in \{1,\cdots,L\}
 \end{cases}
-\]
+$$
 and this system defines forward propagation.
 
