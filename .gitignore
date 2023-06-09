@@ -13,6 +13,7 @@ model.py
 
 # ignore the gitignore
 *.gitignore
+*.html
 
 # ignore all this folder
 dataset/*

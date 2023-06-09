@@ -1,3 +1,4 @@
+# TS-classification
 Definition (Dynamic Time Warping)
 :     Let $S_1=\{x_i\}_{i\in I},S_2=\{x'_j\}_{j\in J}$ be two sequence of elements in $\mathbb{R}^d$ and let $\mathcal{A}(S_1,S_2)$ be the set of all path alignment between $I$ and $J$. Then the DTW of $S_1$ and $S_2$ is defined as
 \[
